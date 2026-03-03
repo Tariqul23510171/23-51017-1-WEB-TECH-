@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Login Form</h1>
+
+    <table>
+      <tr>
+        <td>Student Email <span style="color: red">*</span></td>
+        <td>
+          <input
+            type="text"
+            placeholder="Enter your email"
+            id="email"
+            onchange="return getEmail();"
+          />
+        </td>
+        <td>
+          <p id="emailErr" style="color: red"></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Password <span style="color: red">*</span></td>
+        <td>
+          <input
+            type="text"
+            placeholder="Enter your password"
+            id="password"
+            onkeyup="return getPassword();"
+          />
+        </td>
+        <td>
+          <p id="passErr" style="color: red"></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit" onclick="return collectFormData();">
+            Submit
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <br />
+    <p id="wrongCount" style="color: blue; font-weight: bold"></p>
+  </body>
+</html>
