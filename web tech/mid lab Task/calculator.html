@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css" />
+    <script src="calculator.js"></script>
+  </head>
+  <body>
+    <div class="calculator-container">
+      <h1>23-51017-1</h1>
+
+      <div class="calculator">
+        <input
+          type="text"
+          id="display"
+          placeholder="0"
+          onkeyup="return sanitizeInput();"
+        />
+
+        <div class="button-grid">
+          <button class="btn clear-btn" onclick="return clearDisplay();">C</button>
+          <button class="btn del-btn" onclick="return deleteOne();">DEL</button>
+          <button class="btn operator-btn" onclick="return appendValue('/');">/</button>
+          <button class="btn operator-btn" onclick="return appendValue('*');">*</button>
+
+          <button class="btn" onclick="return appendValue('7');">7</button>
+          <button class="btn" onclick="return appendValue('8');">8</button>
+          <button class="btn" onclick="return appendValue('9');">9</button>
+          <button class="btn operator-btn" onclick="return appendValue('-');">-</button>
+
+          <button class="btn" onclick="return appendValue('4');">4</button>
+          <button class="btn" onclick="return appendValue('5');">5</button>
+          <button class="btn" onclick="return appendValue('6');">6</button>
+          <button class="btn operator-btn" onclick="return appendValue('+');">+</button>
+
+          <button class="btn" onclick="return appendValue('1');">1</button>
+          <button class="btn" onclick="return appendValue('2');">2</button>
+          <button class="btn" onclick="return appendValue('3');">3</button>
+          <button class="btn equal-btn" onclick="return calculateResult();">=</button>
+
+          <button class="btn zero-btn" onclick="return appendValue('0');">0</button>
+          <button class="btn" onclick="return appendValue('.');">.</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
